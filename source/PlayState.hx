@@ -1121,7 +1121,7 @@ class PlayState extends MusicBeatState
 				dad.y += 420;
 				camPos.set(dad.getGraphicMidpoint().x + 300, dad.getGraphicMidpoint().y);
 			case 'virus-mad':
-				dad.x += 100
+				dad.x += 100;
 				dad.y += 420;
 				camPos.set(dad.getGraphicMidpoint().x + 300, dad.getGraphicMidpoint().y);
 			case 'bit':
