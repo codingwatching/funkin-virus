@@ -3712,7 +3712,7 @@ class PlayState extends MusicBeatState
 					totalNotesHit += 1;
 				sicks++;
 				var recycledNote = grpNoteSplashes.recycle(NoteSplash);
-				recycledNote.setupNoteSplash(daNote.x, daNote.y, daNote.noteData);
+				recycledNote.setupNoteSplash(daNote.x - 20, daNote.y + 30, daNote.noteData);
 				grpNoteSplashes.add(recycledNote);
 		}
 
