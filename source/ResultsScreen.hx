@@ -187,7 +187,7 @@ class ResultsScreen extends FlxSubState
 
 		// keybinds
 
-		if (PlayerSettings.player1.controls.ACCEPT #if || android _pad.buttonA.justPressed #end)
+		if (PlayerSettings.player1.controls.ACCEPT #if android || _pad.buttonA.justPressed #end)
 		{
 			music.fadeOut(0.3);
 			
