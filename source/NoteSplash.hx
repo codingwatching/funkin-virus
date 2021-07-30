@@ -10,7 +10,7 @@ class NoteSplash extends FlxSprite
 		if (note == null)
 			note = 0;
 		super(xPos, yPos);
-		frames = Paths.getSparrowAtlas('noteSplashes', 'shared');
+		frames = Paths.getSparrowAtlas('pop', 'shared');
 		animation.addByIndices("note1-0", "down pop note", [0,1,2,3], "", 24, false);
 		animation.addByIndices("note2-0", "up pop note", [0,1,2,3], "", 24, false);
 		animation.addByIndices("note0-0", "left pop note", [0,1,2,3], "", 24, false);
