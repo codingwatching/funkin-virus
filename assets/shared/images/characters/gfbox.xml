@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="gfbox.png">
+	<!-- Created with Adobe Animate version 19.0.0.326 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="gfbox0000" x="0" y="0" width="127" height="116"/>
+	<SubTexture name="gfbox0001" x="0" y="0" width="127" height="116"/>
+	<SubTexture name="gfbox0002" x="127" y="0" width="127" height="116"/>
+	<SubTexture name="gfbox0003" x="127" y="0" width="127" height="116"/>
+	<SubTexture name="gfbox0004" x="127" y="0" width="127" height="116"/>
+	<SubTexture name="gfbox0005" x="254" y="0" width="127" height="116"/>
+	<SubTexture name="gfbox0006" x="254" y="0" width="127" height="116"/>
+	<SubTexture name="gfbox0007" x="254" y="0" width="127" height="116"/>
+	<SubTexture name="gfbox0008" x="254" y="0" width="127" height="116"/>
+	<SubTexture name="gfbox0009" x="381" y="0" width="127" height="116"/>
+	<SubTexture name="gfbox0010" x="381" y="0" width="127" height="116"/>
+	<SubTexture name="gfbox0011" x="381" y="0" width="127" height="116"/>
+	<SubTexture name="gfbox0012" x="381" y="0" width="127" height="116"/>
+	<SubTexture name="gfbox0013" x="0" y="116" width="127" height="116"/>
+	<SubTexture name="gfbox0014" x="0" y="116" width="127" height="116"/>
+	<SubTexture name="gfbox0015" x="127" y="116" width="127" height="116"/>
+	<SubTexture name="gfbox0016" x="127" y="116" width="127" height="116"/>
+	<SubTexture name="gfbox0017" x="254" y="116" width="127" height="116"/>
+	<SubTexture name="gfbox0018" x="254" y="116" width="127" height="116"/>
+	<SubTexture name="gfbox0019" x="254" y="116" width="127" height="116"/>
+	<SubTexture name="gfbox0020" x="381" y="116" width="127" height="116"/>
+	<SubTexture name="gfbox0021" x="381" y="116" width="127" height="116"/>
+	<SubTexture name="gfbox0022" x="381" y="116" width="127" height="116"/>
+	<SubTexture name="gfbox0023" x="381" y="116" width="127" height="116"/>
+	<SubTexture name="gfbox0024" x="381" y="116" width="127" height="116"/>
+	<SubTexture name="gfbox0025" x="0" y="232" width="127" height="116"/>
+	<SubTexture name="gfbox0026" x="0" y="232" width="127" height="116"/>
+	<SubTexture name="gfbox0027" x="0" y="232" width="127" height="116"/>
+	<SubTexture name="gfbox0028" x="0" y="232" width="127" height="116"/>
+	<SubTexture name="gfbox0029" x="0" y="232" width="127" height="116"/>
+</TextureAtlas>

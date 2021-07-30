@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="ROOM DRAK.png">
+	<!-- Created with Adobe Animate version 19.0.0.326 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="ROOM DRAK0000" x="0" y="0" width="350" height="175"/>
+	<SubTexture name="ROOM DRAK0001" x="0" y="0" width="350" height="175"/>
+	<SubTexture name="ROOM DRAK0002" x="0" y="0" width="350" height="175"/>
+	<SubTexture name="ROOM DRAK0003" x="0" y="0" width="350" height="175"/>
+	<SubTexture name="ROOM DRAK0004" x="0" y="0" width="350" height="175"/>
+	<SubTexture name="ROOM DRAK0005" x="0" y="0" width="350" height="175"/>
+	<SubTexture name="ROOM DRAK0006" x="0" y="0" width="350" height="175"/>
+	<SubTexture name="ROOM DRAK0007" x="0" y="0" width="350" height="175"/>
+	<SubTexture name="ROOM DRAK0008" x="0" y="0" width="350" height="175"/>
+	<SubTexture name="ROOM DRAK0009" x="0" y="0" width="350" height="175"/>
+	<SubTexture name="ROOM DRAK0010" x="0" y="0" width="350" height="175"/>
+	<SubTexture name="ROOM DRAK0011" x="0" y="0" width="350" height="175"/>
+	<SubTexture name="ROOM DRAK0012" x="0" y="0" width="350" height="175"/>
+	<SubTexture name="ROOM DRAK0013" x="0" y="0" width="350" height="175"/>
+	<SubTexture name="ROOM DRAK0014" x="0" y="0" width="350" height="175"/>
+	<SubTexture name="ROOM DRAK0015" x="0" y="0" width="350" height="175"/>
+	<SubTexture name="ROOM DRAK0016" x="0" y="0" width="350" height="175"/>
+	<SubTexture name="ROOM DRAK0017" x="0" y="0" width="350" height="175"/>
+	<SubTexture name="ROOM DRAK0018" x="0" y="0" width="350" height="175"/>
+	<SubTexture name="ROOM DRAK0019" x="0" y="0" width="350" height="175"/>
+	<SubTexture name="ROOM DRAK0020" x="0" y="0" width="350" height="175"/>
+	<SubTexture name="ROOM DRAK0021" x="0" y="0" width="350" height="175"/>
+	<SubTexture name="ROOM DRAK0022" x="0" y="0" width="350" height="175"/>
+	<SubTexture name="ROOM DRAK0023" x="0" y="0" width="350" height="175"/>
+	<SubTexture name="ROOM DRAK0024" x="0" y="0" width="350" height="175"/>
+	<SubTexture name="ROOM DRAK0025" x="0" y="0" width="350" height="175"/>
+	<SubTexture name="ROOM DRAK0026" x="0" y="0" width="350" height="175"/>
+	<SubTexture name="ROOM DRAK0027" x="0" y="0" width="350" height="175"/>
+	<SubTexture name="ROOM DRAK0028" x="0" y="0" width="350" height="175"/>
+	<SubTexture name="ROOM DRAK0029" x="0" y="175" width="350" height="175"/>
+	<SubTexture name="ROOM DRAK0030" x="0" y="0" width="350" height="175"/>
+	<SubTexture name="ROOM DRAK0031" x="0" y="0" width="350" height="175"/>
+	<SubTexture name="ROOM DRAK0032" x="0" y="0" width="350" height="175"/>
+	<SubTexture name="ROOM DRAK0033" x="0" y="0" width="350" height="175"/>
+	<SubTexture name="ROOM DRAK0034" x="0" y="0" width="350" height="175"/>
+	<SubTexture name="ROOM DRAK0035" x="0" y="0" width="350" height="175"/>
+	<SubTexture name="ROOM DRAK0036" x="0" y="175" width="350" height="175"/>
+	<SubTexture name="ROOM DRAK0037" x="0" y="175" width="350" height="175"/>
+	<SubTexture name="ROOM DRAK0038" x="0" y="0" width="350" height="175"/>
+	<SubTexture name="ROOM DRAK0039" x="0" y="175" width="350" height="175"/>
+	<SubTexture name="ROOM DRAK0040" x="0" y="0" width="350" height="175"/>
+	<SubTexture name="ROOM DRAK0041" x="0" y="0" width="350" height="175"/>
+	<SubTexture name="ROOM DRAK0042" x="0" y="350" width="350" height="175"/>
+	<SubTexture name="ROOM DRAK0043" x="0" y="350" width="350" height="175"/>
+	<SubTexture name="ROOM DRAK0044" x="0" y="175" width="350" height="175"/>
+</TextureAtlas>

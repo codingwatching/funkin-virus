@@ -1,0 +1,131 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="8bit.png">
+	<!-- Created with Adobe Animate version 19.0.0.326 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="8bit down miss0000" x="352" y="0" width="176" height="158"/>
+	<SubTexture name="8bit down miss0001" x="0" y="0" width="176" height="158"/>
+	<SubTexture name="8bit down miss0002" x="0" y="0" width="176" height="158"/>
+	<SubTexture name="8bit down miss0003" x="176" y="0" width="176" height="158"/>
+	<SubTexture name="8bit down miss0004" x="176" y="0" width="176" height="158"/>
+	<SubTexture name="8bit down miss0005" x="176" y="0" width="176" height="158"/>
+	<SubTexture name="8bit down miss0006" x="176" y="0" width="176" height="158"/>
+	<SubTexture name="8bit down miss0007" x="176" y="0" width="176" height="158"/>
+	<SubTexture name="8bit down miss0008" x="176" y="0" width="176" height="158"/>
+	<SubTexture name="8bit down miss0009" x="176" y="0" width="176" height="158"/>
+	<SubTexture name="8bit down miss0010" x="176" y="0" width="176" height="158"/>
+	<SubTexture name="8bit down miss0011" x="176" y="0" width="176" height="158"/>
+	<SubTexture name="8bit down miss0012" x="176" y="0" width="176" height="158"/>
+	<SubTexture name="8bit down miss0013" x="176" y="0" width="176" height="158"/>
+	<SubTexture name="8bit down note0000" x="352" y="0" width="176" height="158"/>
+	<SubTexture name="8bit down note0001" x="528" y="0" width="176" height="158"/>
+	<SubTexture name="8bit down note0002" x="704" y="0" width="176" height="158"/>
+	<SubTexture name="8bit down note0003" x="704" y="0" width="176" height="158"/>
+	<SubTexture name="8bit down note0004" x="704" y="0" width="176" height="158"/>
+	<SubTexture name="8bit down note0005" x="704" y="0" width="176" height="158"/>
+	<SubTexture name="8bit down note0006" x="704" y="0" width="176" height="158"/>
+	<SubTexture name="8bit down note0007" x="704" y="0" width="176" height="158"/>
+	<SubTexture name="8bit down note0008" x="704" y="0" width="176" height="158"/>
+	<SubTexture name="8bit down note0009" x="704" y="0" width="176" height="158"/>
+	<SubTexture name="8bit down note0010" x="704" y="0" width="176" height="158"/>
+	<SubTexture name="8bit down note0011" x="704" y="0" width="176" height="158"/>
+	<SubTexture name="8bit down note0012" x="704" y="0" width="176" height="158"/>
+	<SubTexture name="8bit down note0013" x="704" y="0" width="176" height="158"/>
+	<SubTexture name="8bit idle0000" x="0" y="158" width="176" height="158"/>
+	<SubTexture name="8bit idle0001" x="0" y="158" width="176" height="158"/>
+	<SubTexture name="8bit idle0002" x="176" y="158" width="176" height="158"/>
+	<SubTexture name="8bit idle0003" x="176" y="158" width="176" height="158"/>
+	<SubTexture name="8bit idle0004" x="352" y="158" width="176" height="158"/>
+	<SubTexture name="8bit idle0005" x="352" y="158" width="176" height="158"/>
+	<SubTexture name="8bit idle0006" x="528" y="158" width="176" height="158"/>
+	<SubTexture name="8bit idle0007" x="528" y="158" width="176" height="158"/>
+	<SubTexture name="8bit idle0008" x="704" y="158" width="176" height="158"/>
+	<SubTexture name="8bit idle0009" x="704" y="158" width="176" height="158"/>
+	<SubTexture name="8bit idle0010" x="704" y="158" width="176" height="158"/>
+	<SubTexture name="8bit idle0011" x="704" y="158" width="176" height="158"/>
+	<SubTexture name="8bit idle0012" x="704" y="158" width="176" height="158"/>
+	<SubTexture name="8bit idle0013" x="704" y="158" width="176" height="158"/>
+	<SubTexture name="8bit left miss0000" x="0" y="316" width="176" height="158"/>
+	<SubTexture name="8bit left miss0001" x="176" y="316" width="176" height="158"/>
+	<SubTexture name="8bit left miss0002" x="176" y="316" width="176" height="158"/>
+	<SubTexture name="8bit left miss0003" x="352" y="316" width="176" height="158"/>
+	<SubTexture name="8bit left miss0004" x="352" y="316" width="176" height="158"/>
+	<SubTexture name="8bit left miss0005" x="352" y="316" width="176" height="158"/>
+	<SubTexture name="8bit left miss0006" x="352" y="316" width="176" height="158"/>
+	<SubTexture name="8bit left miss0007" x="352" y="316" width="176" height="158"/>
+	<SubTexture name="8bit left miss0008" x="352" y="316" width="176" height="158"/>
+	<SubTexture name="8bit left miss0009" x="352" y="316" width="176" height="158"/>
+	<SubTexture name="8bit left miss0010" x="352" y="316" width="176" height="158"/>
+	<SubTexture name="8bit left miss0011" x="352" y="316" width="176" height="158"/>
+	<SubTexture name="8bit left miss0012" x="352" y="316" width="176" height="158"/>
+	<SubTexture name="8bit left miss0013" x="352" y="316" width="176" height="158"/>
+	<SubTexture name="8bit left note0000" x="0" y="316" width="176" height="158"/>
+	<SubTexture name="8bit left note0001" x="0" y="316" width="176" height="158"/>
+	<SubTexture name="8bit left note0002" x="528" y="316" width="176" height="158"/>
+	<SubTexture name="8bit left note0003" x="528" y="316" width="176" height="158"/>
+	<SubTexture name="8bit left note0004" x="528" y="316" width="176" height="158"/>
+	<SubTexture name="8bit left note0005" x="528" y="316" width="176" height="158"/>
+	<SubTexture name="8bit left note0006" x="528" y="316" width="176" height="158"/>
+	<SubTexture name="8bit left note0007" x="528" y="316" width="176" height="158"/>
+	<SubTexture name="8bit left note0008" x="528" y="316" width="176" height="158"/>
+	<SubTexture name="8bit left note0009" x="528" y="316" width="176" height="158"/>
+	<SubTexture name="8bit left note0010" x="528" y="316" width="176" height="158"/>
+	<SubTexture name="8bit left note0011" x="528" y="316" width="176" height="158"/>
+	<SubTexture name="8bit left note0012" x="528" y="316" width="176" height="158"/>
+	<SubTexture name="8bit left note0013" x="528" y="316" width="176" height="158"/>
+	<SubTexture name="8bit right miss0000" x="176" y="474" width="176" height="158"/>
+	<SubTexture name="8bit right miss0001" x="704" y="316" width="176" height="158"/>
+	<SubTexture name="8bit right miss0002" x="704" y="316" width="176" height="158"/>
+	<SubTexture name="8bit right miss0003" x="0" y="474" width="176" height="158"/>
+	<SubTexture name="8bit right miss0004" x="0" y="474" width="176" height="158"/>
+	<SubTexture name="8bit right miss0005" x="0" y="474" width="176" height="158"/>
+	<SubTexture name="8bit right miss0006" x="0" y="474" width="176" height="158"/>
+	<SubTexture name="8bit right miss0007" x="0" y="474" width="176" height="158"/>
+	<SubTexture name="8bit right miss0008" x="0" y="474" width="176" height="158"/>
+	<SubTexture name="8bit right miss0009" x="0" y="474" width="176" height="158"/>
+	<SubTexture name="8bit right miss0010" x="0" y="474" width="176" height="158"/>
+	<SubTexture name="8bit right miss0011" x="0" y="474" width="176" height="158"/>
+	<SubTexture name="8bit right miss0012" x="0" y="474" width="176" height="158"/>
+	<SubTexture name="8bit right miss0013" x="0" y="474" width="176" height="158"/>
+	<SubTexture name="8bit right note0000" x="176" y="474" width="176" height="158"/>
+	<SubTexture name="8bit right note0001" x="176" y="474" width="176" height="158"/>
+	<SubTexture name="8bit right note0002" x="352" y="474" width="176" height="158"/>
+	<SubTexture name="8bit right note0003" x="352" y="474" width="176" height="158"/>
+	<SubTexture name="8bit right note0004" x="352" y="474" width="176" height="158"/>
+	<SubTexture name="8bit right note0005" x="352" y="474" width="176" height="158"/>
+	<SubTexture name="8bit right note0006" x="352" y="474" width="176" height="158"/>
+	<SubTexture name="8bit right note0007" x="352" y="474" width="176" height="158"/>
+	<SubTexture name="8bit right note0008" x="352" y="474" width="176" height="158"/>
+	<SubTexture name="8bit right note0009" x="352" y="474" width="176" height="158"/>
+	<SubTexture name="8bit right note0010" x="352" y="474" width="176" height="158"/>
+	<SubTexture name="8bit right note0011" x="352" y="474" width="176" height="158"/>
+	<SubTexture name="8bit right note0012" x="352" y="474" width="176" height="158"/>
+	<SubTexture name="8bit right note0013" x="352" y="474" width="176" height="158"/>
+	<SubTexture name="8bit up miss0000" x="0" y="632" width="176" height="158" frameX="-1" frameY="0" frameWidth="176" frameHeight="158"/>
+	<SubTexture name="8bit up miss0001" x="528" y="474" width="176" height="158" frameX="0" frameY="-1" frameWidth="177" frameHeight="159"/>
+	<SubTexture name="8bit up miss0002" x="528" y="474" width="176" height="158" frameX="0" frameY="-1" frameWidth="177" frameHeight="159"/>
+	<SubTexture name="8bit up miss0003" x="704" y="474" width="176" height="158" frameX="0" frameY="-1" frameWidth="177" frameHeight="159"/>
+	<SubTexture name="8bit up miss0004" x="704" y="474" width="176" height="158" frameX="0" frameY="-1" frameWidth="177" frameHeight="159"/>
+	<SubTexture name="8bit up miss0005" x="704" y="474" width="176" height="158" frameX="0" frameY="-1" frameWidth="177" frameHeight="159"/>
+	<SubTexture name="8bit up miss0006" x="704" y="474" width="176" height="158" frameX="0" frameY="-1" frameWidth="177" frameHeight="159"/>
+	<SubTexture name="8bit up miss0007" x="704" y="474" width="176" height="158" frameX="0" frameY="-1" frameWidth="177" frameHeight="159"/>
+	<SubTexture name="8bit up miss0008" x="704" y="474" width="176" height="158" frameX="0" frameY="-1" frameWidth="177" frameHeight="159"/>
+	<SubTexture name="8bit up miss0009" x="704" y="474" width="176" height="158" frameX="0" frameY="-1" frameWidth="177" frameHeight="159"/>
+	<SubTexture name="8bit up miss0010" x="704" y="474" width="176" height="158" frameX="0" frameY="-1" frameWidth="177" frameHeight="159"/>
+	<SubTexture name="8bit up miss0011" x="704" y="474" width="176" height="158" frameX="0" frameY="-1" frameWidth="177" frameHeight="159"/>
+	<SubTexture name="8bit up miss0012" x="704" y="474" width="176" height="158" frameX="0" frameY="-1" frameWidth="177" frameHeight="159"/>
+	<SubTexture name="8bit up miss0013" x="704" y="474" width="176" height="158" frameX="0" frameY="-1" frameWidth="177" frameHeight="159"/>
+	<SubTexture name="8bit up note0000" x="0" y="632" width="176" height="158"/>
+	<SubTexture name="8bit up note0001" x="0" y="632" width="176" height="158"/>
+	<SubTexture name="8bit up note0002" x="176" y="632" width="176" height="158"/>
+	<SubTexture name="8bit up note0003" x="176" y="632" width="176" height="158"/>
+	<SubTexture name="8bit up note0004" x="176" y="632" width="176" height="158"/>
+	<SubTexture name="8bit up note0005" x="176" y="632" width="176" height="158"/>
+	<SubTexture name="8bit up note0006" x="176" y="632" width="176" height="158"/>
+	<SubTexture name="8bit up note0007" x="176" y="632" width="176" height="158"/>
+	<SubTexture name="8bit up note0008" x="176" y="632" width="176" height="158"/>
+	<SubTexture name="8bit up note0009" x="176" y="632" width="176" height="158"/>
+	<SubTexture name="8bit up note0010" x="176" y="632" width="176" height="158"/>
+	<SubTexture name="8bit up note0011" x="176" y="632" width="176" height="158"/>
+	<SubTexture name="8bit up note0012" x="176" y="632" width="176" height="158"/>
+	<SubTexture name="8bit up note0013" x="176" y="632" width="176" height="158"/>
+</TextureAtlas>

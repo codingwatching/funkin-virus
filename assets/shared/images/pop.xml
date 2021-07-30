@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="pop.png">
+	<!-- Created with Adobe Animate version 19.0.0.326 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="down pop note0000" x="0" y="0" width="125" height="125"/>
+	<SubTexture name="down pop note0001" x="125" y="0" width="125" height="125"/>
+	<SubTexture name="down pop note0002" x="250" y="0" width="125" height="125"/>
+	<SubTexture name="down pop note0003" x="375" y="0" width="125" height="125"/>
+	<SubTexture name="down pop note0004" x="0" y="125" width="125" height="125"/>
+	<SubTexture name="down pop note0005" x="125" y="125" width="125" height="125"/>
+	<SubTexture name="down pop note0006" x="250" y="125" width="125" height="125"/>
+	<SubTexture name="down pop note0007" x="375" y="125" width="125" height="125"/>
+	<SubTexture name="left pop note0000" x="0" y="250" width="125" height="125"/>
+	<SubTexture name="left pop note0001" x="125" y="250" width="125" height="125"/>
+	<SubTexture name="left pop note0002" x="250" y="250" width="125" height="125"/>
+	<SubTexture name="left pop note0003" x="375" y="250" width="125" height="125"/>
+	<SubTexture name="left pop note0004" x="0" y="375" width="125" height="125"/>
+	<SubTexture name="left pop note0005" x="125" y="375" width="125" height="125"/>
+	<SubTexture name="left pop note0006" x="250" y="375" width="125" height="125"/>
+	<SubTexture name="left pop note0007" x="375" y="375" width="125" height="125"/>
+	<SubTexture name="right pop note0000" x="0" y="500" width="125" height="125"/>
+	<SubTexture name="right pop note0001" x="125" y="500" width="125" height="125"/>
+	<SubTexture name="right pop note0002" x="250" y="500" width="125" height="125"/>
+	<SubTexture name="right pop note0003" x="375" y="500" width="125" height="125"/>
+	<SubTexture name="right pop note0004" x="0" y="625" width="125" height="125"/>
+	<SubTexture name="right pop note0005" x="125" y="625" width="125" height="125"/>
+	<SubTexture name="right pop note0006" x="250" y="625" width="125" height="125"/>
+	<SubTexture name="right pop note0007" x="375" y="625" width="125" height="125"/>
+	<SubTexture name="up pop note0000" x="0" y="750" width="125" height="125"/>
+	<SubTexture name="up pop note0001" x="125" y="750" width="125" height="125"/>
+	<SubTexture name="up pop note0002" x="250" y="750" width="125" height="125"/>
+	<SubTexture name="up pop note0003" x="375" y="750" width="125" height="125"/>
+	<SubTexture name="up pop note0004" x="0" y="875" width="125" height="125"/>
+	<SubTexture name="up pop note0005" x="125" y="875" width="125" height="125"/>
+	<SubTexture name="up pop note0006" x="250" y="875" width="125" height="125"/>
+	<SubTexture name="up pop note0007" x="375" y="875" width="125" height="125"/>
+</TextureAtlas>
