@@ -79,8 +79,9 @@ class Main extends Sprite
 		}
 
 		#if cpp
-		if (FlxG.save.data.cacheImages)
-			initialState = Caching;
+		//if (FlxG.save.data.cacheImages)
+		initialState = Caching;
+		//im stupid
 		#end
 
 		#if (android || ios)
