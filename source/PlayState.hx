@@ -4766,7 +4766,7 @@ class PlayState extends MusicBeatState
 	override function beatHit()
 	{
 		super.beatHit();
-		if (curStage == 'darkroom'){
+		if (curStage == 'darkroom' && SONG. song.toLowerCase() == 'intoxicate'){
 			if (curStep > 898 && curStep < 1408){
 				//camZooming = true;
 				bg.alpha = 1;
@@ -4784,7 +4784,7 @@ class PlayState extends MusicBeatState
 				}
 			}
 		}
-		if (SONG.song.toLowerCase() == 'guns' && curBeat % 4 == 0 && curBeat > 4){
+		if (curStage == 'void' && curBeat % 4 == 0 && curBeat > 2){
 			changeflor(FlxG.random.int(1,3));
 		}
 
