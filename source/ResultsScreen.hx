@@ -84,7 +84,7 @@ class ResultsScreen extends FlxSubState
 			text.text = "Week Cleared!";
 		}
 
-		comboText = new FlxText(20,-75,0,'Judgements:\nSicks - ${PlayState.sicks}\nGoods - ${PlayState.goods}\nBads - ${PlayState.bads}\n\nCombo Breaks: ${(PlayState.isStoryMode ? PlayState.campaignMisses : PlayState.misses)}\nHighest Combo: ${PlayState.highestCombo + 1}\nScore: ${PlayState.instance.songScore}\nAccuracy: ${HelperFunctions.truncateFloat(PlayState.instance.accuracy,2)}%\n\n${Ratings.GenerateLetterRank(PlayState.instance.accuracy)}\n\n${!PlayState.loadRep ? "F1 - View replay\nF2 - Replay song" : ""}
+		comboText = new FlxText(20,-75,0,'Judgements:\nSicks - ${PlayState.sicks}\nGoods - ${PlayState.goods}\nBads - ${PlayState.bads}\n\nCombo Breaks: ${(PlayState.isStoryMode ? PlayState.campaignMisses : PlayState.misses)}\nHighest Combo: ${PlayState.highestCombo + 1}\nScore: ${PlayState.instance.songScore}\nAccuracy: ${HelperFunctions.truncateFloat(PlayState.instance.accuracy,2)}%\n\n${Ratings.GenerateLetterRank(PlayState.instance.accuracy)}\n\n${!PlayState.loadRep ? "F2 - Replay song" : ""}
 		');
 		comboText.size = 28;
 		comboText.setBorderStyle(FlxTextBorderStyle.OUTLINE,FlxColor.BLACK,4,1);
@@ -217,8 +217,8 @@ class ResultsScreen extends FlxSubState
 
 		if (FlxG.keys.justPressed.F1 && !PlayState.loadRep)
 		{
-			trace(PlayState.rep.path);
-			PlayState.rep = Replay.LoadReplay(PlayState.rep.path);
+			trace("nahhh");
+			/*PlayState.rep = Replay.LoadReplay(PlayState.rep.path);
 
 			PlayState.loadRep = true;
 			PlayState.isSM = PlayState.rep.replay.sm;
@@ -282,7 +282,7 @@ class ResultsScreen extends FlxSubState
 				PlayState.SONG = Song.loadFromJson(poop, PlayState.rep.replay.songName);
 			PlayState.isStoryMode = false;
 			PlayState.storyDifficulty = PlayState.rep.replay.songDiff;
-			LoadingState.loadAndSwitchState(new PlayState());
+			LoadingState.loadAndSwitchState(new PlayState());*/
 		}
 
 		if (FlxG.keys.justPressed.F2  && !PlayState.loadRep)
