@@ -106,7 +106,10 @@ class PauseSubState extends MusicBeatSubstate
 		if (pauseMusic.volume < 0.5)
 			pauseMusic.volume += 0.01 * elapsed;
 
-		super.update(elapsed);
+		if (FlxG.save.data.lessUpdate)
+			super.update(elapsed/2);
+		else
+			super.update(elapsed);
 
 		if (PlayState.instance.useVideo)
 			menuItems.remove('Resume');

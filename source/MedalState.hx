@@ -2,17 +2,18 @@ package;
 
 import flixel.util.FlxColor;
 import flixel.FlxSprite;
-import Checkbox;
+import MedalSprite;
 import flixel.FlxG;
 import flixel.group.FlxGroup.FlxTypedGroup;
 import flixel.text.FlxText;
 import BitData;
+import MedalSprite;
 
-class OptionsState extends MusicBeatState
+class MedalState extends MusicBeatState
 {
 	private var grptext:FlxTypedGroup<Alphabet>;
 
-	private var checkboxGroup:FlxTypedGroup<Checkbox>;
+	private var medalGroup:FlxTypedGroup<MedalSprite>;
 
 	var curSelected:Int = 0;
 
@@ -24,16 +25,9 @@ class OptionsState extends MusicBeatState
 	override public function create() 
 	{
 		#if (android || ios || desktop)
-		if (FlxG.save.data.storyBeated){
-			menuItems = ['note skin',
-				'bruh',
-				'vine boom'
-			];
-		}
-		else{
-			menuItems = ['note skin'
-			];
-		}
+		menuItems = ['Sus',
+			'Big Sus'
+		];
 		#end
 		var menuBG:FlxSprite = new FlxSprite().loadGraphic('assets/images/menuDesat.png');
 		menuBG.color = FlxColor.fromRGB(82, 79, 78);
@@ -46,8 +40,8 @@ class OptionsState extends MusicBeatState
 		grptext = new FlxTypedGroup<Alphabet>();
 		add(grptext);
 
-		checkboxGroup = new FlxTypedGroup<Checkbox>();
-		add(checkboxGroup);
+		medalGroup = new FlxTypedGroup<MedalSprite>();
+		add(medalGroup);
 
 		for (i in 0...menuItems.length)
 		{ 
@@ -56,18 +50,16 @@ class OptionsState extends MusicBeatState
 			controlLabel.targetY = i;
 			grptext.add(controlLabel);
 
-			var ch = new Checkbox(controlLabel.x + controlLabel.width + 10, controlLabel.y - 20);
-			checkboxGroup.add(ch);
-			add(ch);
+			var med = new MedalSprite(controlLabel.x + controlLabel.width + 10, controlLabel.y - 20, menuItems[i]);
+			medalGroup.add(med);
+			add(med);
 			//FlxG.save.data
 
 			switch (menuItems[i]){
-				case 'bruh':
-					ch.change(FlxG.save.data.bruh);
-				case 'vine boom':
-					ch.change(FlxG.save.data.vineboom);
-				case 'note skin':
-					ch.change(FlxG.save.data.noteSkin);
+				case 'Sus':
+					med.changeShit(FlxG.save.data.Sus);
+				case 'Big Sus':
+					med.changeShit(FlxG.save.data.BigSus);
 			}
 
 			// DONT PUT X IN THE FIRST PARAMETER OF new ALPHABET() !!
@@ -76,10 +68,8 @@ class OptionsState extends MusicBeatState
 		var noticebg = new FlxSprite(0, FlxG.height - 56).makeGraphic(FlxG.width, 60, FlxColor.BLACK);
 		noticebg.alpha = 0.25;
 
-
 		notice = new FlxText(0, 0, 0, "", 24);
 
-		//notice.x = (FlxG.width / 2) - (notice.width / 2);
 		notice.screenCenter();
 		notice.y = FlxG.height - 56;
 		notice.alpha = 0.6;
@@ -93,43 +83,34 @@ class OptionsState extends MusicBeatState
 
 	override function update(elapsed:Float)
 	{
-
 		if (FlxG.save.data.lessUpdate)
 			super.update(elapsed/2);
 		else
 			super.update(elapsed);
 
-		for (i in 0...checkboxGroup.length)
+		for (i in 0...medalGroup.length)
 		{
-			checkboxGroup.members[i].x = grptext.members[i].x + grptext.members[i].width + 10;
-			checkboxGroup.members[i].y = grptext.members[i].y - 20;
-		} 
+			medalGroup.members[i].x = grptext.members[i].x + grptext.members[i].width + 10;
+			MedalSprite.members[i].y = grptext.members[i].y - 20;
+		}
 		var daSelected:String = menuItems[curSelected];
 
 		switch (daSelected){
-			case 'note skin':
-				notice.text = "Toggle the mod's note skin on or off.\nSwitch pages using LEFT\n";
-			case 'vine boom':
-				notice.text = "Toggle vine boom when player's notes hit.\nSwitch pages using LEFT\n";
-			case 'bruh':
-				notice.text = "Toggle bruh sound effect when opponent's notes hit.\nSwitch pages using RIGHT\n";
-		}
-
-		if (controls.ACCEPT)
-		{
-
-			trace(curSelected);
-
-			switch (daSelected)
-			{
-				case 'vine boom':
-					FlxG.save.data.vineboom = checkboxGroup.members[curSelected].change();
-				case 'bruh':
-					FlxG.save.data.bruh = checkboxGroup.members[curSelected].change();
-				case 'note skin':
-					FlxG.save.data.noteSkin = checkboxGroup.members[curSelected].change();
-			}
-			FlxG.save.flush();
+			case 'Sus':
+				switch (FlxG.save.data.Sus){
+					case false | null:
+						notice.text = '???';
+					case true:
+						notice.text = 'SUS!\nPress F 69 times\n';
+				}
+			case 'Big Sus':
+				switch (FlxG.save.data.BigSus){
+					case false | null:
+						notice.text = '???';
+					case true:
+						notice.text = 'BIG SUS!\nPress F 420 times\n';
+						//bruuuuuu!
+				}
 		}
 
 		if (controls.BACK #if android || FlxG.android.justReleased.BACK #end) {
@@ -141,9 +122,6 @@ class OptionsState extends MusicBeatState
 			changeSelection(-1);
 		if (controls.DOWN_P)
 			changeSelection(1);
-
-		if (controls.RIGHT_P)
-			FlxG.switchState(new OptionsState3());
 
 	}
 

@@ -28,17 +28,21 @@ class NoteSplash extends FlxSprite
 		if (note == null)
 			note = 0;
 		setPosition(xPos, yPos);
-		alpha = 0.7;
+		alpha = 0.9;
 		animation.play("note" + note + "-" + FlxG.random.int(0, 1), true);
 		animation.curAnim.frameRate = 24 + FlxG.random.int(-2, 2);
 		updateHitbox();
 		offset.set(0.3 * width, 0.3 * height);
+		antialiasing = FlxG.save.data.antialiasing;
 	}
 
 	override public function update(elapsed)
 	{
 		if (animation.curAnim.finished)
 			kill();
-		super.update(elapsed);
+		if (FlxG.save.data.lessUpdate)
+			super.update(elapsed/2);
+		else
+			super.update(elapsed);
 	}
 }

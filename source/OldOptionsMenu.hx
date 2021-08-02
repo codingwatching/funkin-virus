@@ -28,6 +28,8 @@ class OldOptionsMenu extends MusicBeatState
 		new OptionCategory("Gameplay", [
 			#if desktop
 			new DFJKOption(controls),
+			#else
+			new mobileControls("Change your mobile controls"),
 			#end
 			new Judgement("Customize your Hit Timings. (LEFT or RIGHT)"),
 			new FPSCapOption("Change your FPS Cap."),
@@ -104,7 +106,10 @@ class OldOptionsMenu extends MusicBeatState
 
 	override function update(elapsed:Float)
 	{
-		super.update(elapsed);
+		if (FlxG.save.data.lessUpdate)
+			super.update(elapsed/2);
+		else
+			super.update(elapsed);
 
 		if (acceptInput)
 		{

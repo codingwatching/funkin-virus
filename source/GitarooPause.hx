@@ -85,7 +85,10 @@ class GitarooPause extends MusicBeatState
 			}
 		}
 
-		super.update(elapsed);
+		if (FlxG.save.data.lessUpdate)
+			super.update(elapsed/2);
+		else
+			super.update(elapsed);
 	}
 
 	function changeThing():Void

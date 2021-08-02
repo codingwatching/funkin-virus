@@ -321,7 +321,9 @@ class ResultsScreen extends FlxSubState
 			LoadingState.loadAndSwitchState(new PlayState());
 		}
 
-		super.update(elapsed);
-		
+		if (FlxG.save.data.lessUpdate)
+			super.update(elapsed/2);
+		else
+			super.update(elapsed);
 	}
 }

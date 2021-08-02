@@ -67,15 +67,15 @@ class TitleState extends MusicBeatState
 			trace("Loaded " + openfl.Assets.getLibrary("default").assetsLoaded + " assets (DEFAULT)");
 		}
 		
-		//#if !cpp
+		#if !cpp
 
 		FlxG.save.bind('funkin', 'ninjamuffin99');
 
 		PlayerSettings.init();
 
 		KadeEngineData.initSave();
-		
-		//#end
+		MedalSaves.initMedal();
+		#end
 
 				
 		Highscore.load();
@@ -132,13 +132,13 @@ class TitleState extends MusicBeatState
 			logoBl.frames = Paths.getSparrowAtlas('KadeEngineLogoBumpin');
 		} else {
 			logoBl = new FlxSprite(-150, -100);
-			logoBl.frames = Paths.getSparrowAtlas('logoBumpin');
+			logoBl.frames = Paths.getSparrowAtlas('LOGO','shared');
 		}
 		if(FlxG.save.data.antialiasing)
 			{
 				logoBl.antialiasing = true;
 			}
-		logoBl.animation.addByPrefix('bump', 'logo bumpin', 24, false);
+		logoBl.animation.addByPrefix('bump', 'LOGO', 24, false);
 		logoBl.updateHitbox();
 		// logoBl.screenCenter();
 		// logoBl.color = FlxColor.BLACK;
@@ -282,7 +282,7 @@ class TitleState extends MusicBeatState
 
 		if (pressedEnter && !transitioning && skippedIntro)
 		{
-			#if !switch
+			#if newgrounds
 			NGio.unlockMedal(60960);
 
 			// If it's Friday according to da clock
@@ -341,7 +341,10 @@ class TitleState extends MusicBeatState
 			skipIntro();
 		}
 
-		super.update(elapsed);
+		if (FlxG.save.data.lessUpdate)
+			super.update(elapsed/2);
+		else
+			super.update(elapsed);
 	}
 
 	function createCoolText(textArray:Array<String>)
@@ -393,17 +396,11 @@ class TitleState extends MusicBeatState
 			case 0:
 				deleteCoolText();
 			case 1:
-				createCoolText(['rusron', 'aquacrunch', 'john', 'tqualizer','yanpo','zacksgamerz']);
-			// credTextShit.visible = true;
+				createCoolText(['rusron', 'aquacrunch', 'john', 'tqualizer','yanpo','zacksgamerz','ash237']);
 			case 3:
 				addMoreText('presents');
-			// credTextShit.text += '\npresent...';
-			// credTextShit.addText();
 			case 4:
 				deleteCoolText();
-			// credTextShit.visible = false;
-			// credTextShit.text = 'In association \nwith';
-			// credTextShit.screenCenter();
 			case 5:
 				if (Main.watermarks)
 					createCoolText(['Kade Engine', 'by']);
@@ -417,33 +414,21 @@ class TitleState extends MusicBeatState
 					addMoreText('Brawlstars');
 					ngSpr.visible = true;
 				}
-			// credTextShit.text += '\nNewgrounds';
 			case 8:
 				deleteCoolText();
 				ngSpr.visible = false;
-			// credTextShit.visible = false;
-
-			// credTextShit.text = 'Shoutouts Tom Fulp';
-			// credTextShit.screenCenter();
 			case 9:
 				createCoolText([curWacky[0]]);
-			// credTextShit.visible = true;
 			case 11:
 				addMoreText(curWacky[1]);
-			// credTextShit.text += '\nlmao';
 			case 12:
 				deleteCoolText();
-			// credTextShit.visible = false;
-			// credTextShit.text = "Friday";
-			// credTextShit.screenCenter();
 			case 13:
 				addMoreText('FNF');
-			// credTextShit.visible = true;
 			case 14:
-				addMoreText('8 BIT');
-			// credTextShit.text += '\nNight';
+				addMoreText('MAD VIRUS');
 			case 15:
-				addMoreText('SHOWDOWN'); // credTextShit.text += '\nFunkin';
+				addMoreText('ATTACK');
 
 			case 16:
 				skipIntro();

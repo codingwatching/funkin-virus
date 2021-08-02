@@ -95,6 +95,25 @@ class DFJKOption extends Option
 		return "Key Bindings";
 	}
 }
+class mobileControls extends Option
+{
+	public function new(desc:String)
+	{
+		super();
+		description = desc;
+	}
+
+	public override function press():Bool
+	{
+		FlxG.switchState(new CustomControlsState());
+		return false;
+	}
+
+	private override function updateDisplay():String
+	{
+		return "Change mobile controls";
+	}
+}
 
 class CpuStrums extends Option
 {

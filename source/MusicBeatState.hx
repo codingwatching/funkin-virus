@@ -10,6 +10,7 @@ import flixel.FlxG;
 import flixel.addons.ui.FlxUIState;
 import flixel.input.actions.FlxActionInput;
 import ui.FlxVirtualPad;
+import Achievements;
 
 class MusicBeatState extends FlxUIState
 {
@@ -20,6 +21,10 @@ class MusicBeatState extends FlxUIState
 	private var curBeat:Int = 0;
 	private var curDecimalBeat:Float = 0;
 	private var controls(get, never):Controls;
+
+	public var cameraStuff:FlxCamera;
+	public var fpressed:Int = 0;
+	public var dontSpam:Bool = false;
 
 	inline function get_controls():Controls
 		return PlayerSettings.player1.controls;
@@ -53,6 +58,9 @@ class MusicBeatState extends FlxUIState
 
 	override function create()
 	{
+		cameraStuff = new FlxCamera();
+		cameraStuff.bgColor.alpha = 0;
+		FlxG.cameras.add(cameraStuff);
 		TimingStruct.clearTimings();
 		(cast (Lib.current.getChildAt(0), Main)).setFPSCap(FlxG.save.data.fpsCap);
 
@@ -137,7 +145,24 @@ class MusicBeatState extends FlxUIState
 		if ((cast (Lib.current.getChildAt(0), Main)).getFPSCap != FlxG.save.data.fpsCap && FlxG.save.data.fpsCap <= 290)
 			(cast (Lib.current.getChildAt(0), Main)).setFPSCap(FlxG.save.data.fpsCap);
 
-		super.update(elapsed);
+		if (FlxG.save.data.lessUpdate)
+			super.update(elapsed/2);
+		else
+			super.update(elapsed);
+
+//shit for Achievements
+		if (FlxG.keys.justPressed.F && !dontSpam)
+			fpressed += 1;
+
+		switch (fpressed){
+			case 69:
+				fpressed == 70;
+				medalPop('Sus');
+			case 420:
+				fpressed == 421;
+				medalPop('Big Sus');
+		}
+
 	}
 
 	private function updateBeat():Void
@@ -183,4 +208,52 @@ class MusicBeatState extends FlxUIState
 		FlxG.openURL(schmancy);
 		#end
 	}
+
+	public function medalPop(ass:String){
+		dontSpam = true;
+		public var medal:Achievements = new Achievements(ass);
+		public var medalBg:FlxSprite = new FlxSprite(800,FlxG.height * 0.9).loadGraphic(Paths.image('UNLOCK','shared'));
+		medalBg.scale.set(5,5);
+		medalBg.antialiasing = false;
+		medalBg.y += 200;
+		medal.y += 200;
+		medal.cameras = [cameraStuff];
+		medalBg.cameras = [cameraStuff];
+		add(medalBg);
+		add(medal);
+		FlxTween.linearMotion(medal, 800, FlxG.height * 0.9 + 200, 800, FlxG.height * 0.9, 2, true);
+		FlxTween.linearMotion(medalBg, 800, FlxG.height * 0.9 + 200, 800, FlxG.height * 0.9, 2, true);
+		textPop(ass);
+		new FlxTimer().start(4, function(tmr:FlxTimer){
+			FlxTween.linearMotion(medal, 800, FlxG.height * 0.9, 800, FlxG.height * 0.9 + 200, 2, true);
+			FlxTween.linearMotion(medalBg, 800, FlxG.height * 0.9, 800, FlxG.height * 0.9 + 200, 2, true);
+			new FlxTimer().start(2, function(tmr:FlxTimer){
+				remove(medal);
+				remove(medalBg);
+				dontSpam = false;
+			});
+		});
+	}
+	public function textPop(ass:String){
+		public var txt:FlxText = new FlxText(0, 0, 0, "", 24);
+		txt.screenCenter();
+		txt.y = FlxG.height - 56;
+		txt.alpha = 0;
+		switch (ass){
+			case 'Sus':
+				text.text = "SUS!\nPress F 69 times.\n"
+				FlxG.save.data.Sus = true;
+			default:
+				text.text = "how\n";
+		}
+		new FlxTimer().start(0.1, function(tmr:FlxTimer){
+			txt.alpha += 0.1;
+			if (txt.alpha < 0.9)
+				tmr.reset(0.1);
+		});
+		new FlxTimer().start(6, function(tmr:FlxTimer){
+			remove(txt);
+		});
+	}
 }
+//im not a good flxtext dude. :(

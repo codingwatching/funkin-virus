@@ -26,6 +26,7 @@ class OptionsState extends MusicBeatState
 		#if (android || ios || desktop)
 		menuItems = ['downscroll',
 			'ghost tap',
+			'less update',
 			#if desktop
 			'reset button'
 			#end
@@ -66,6 +67,8 @@ class OptionsState extends MusicBeatState
 					ch.change(FlxG.save.data.ghost);
 				case 'reset button':
 					ch.change(FlxG.save.data.resetButton);
+				case 'less update':
+					ch.change(FlxG.save.data.lessUpdate);
 			}
 
 			// DONT PUT X IN THE FIRST PARAMETER OF new ALPHABET() !!
@@ -74,10 +77,8 @@ class OptionsState extends MusicBeatState
 		var noticebg = new FlxSprite(0, FlxG.height - 56).makeGraphic(FlxG.width, 60, FlxColor.BLACK);
 		noticebg.alpha = 0.25;
 
-
 		notice = new FlxText(0, 0, 0, "", 24);
 
-		//notice.x = (FlxG.width / 2) - (notice.width / 2);
 		notice.screenCenter();
 		notice.y = FlxG.height - 56;
 		notice.alpha = 0.6;
@@ -91,8 +92,10 @@ class OptionsState extends MusicBeatState
 
 	override function update(elapsed:Float)
 	{
-
-		super.update(elapsed);
+		if (FlxG.save.data.lessUpdate)
+			super.update(elapsed/2);
+		else
+			super.update(elapsed);
 
 		for (i in 0...checkboxGroup.length)
 		{
@@ -110,6 +113,8 @@ class OptionsState extends MusicBeatState
 				notice.text = 'Toggle counting pressing a directional input when no arrow is there as a miss.\nSwitch pages using RIGHT\n';
 			case 'reset button':
 				notice.text = 'Toggle pressing R to gameover.\nSwitch pages using RIGHT\n';
+			case 'less update':
+				notice.text = 'Makes update frames way slower but increases performance (Might cause bugs)\nSwitch pages using RIGHT\n'
 		}
 
 		if (controls.ACCEPT)
@@ -127,6 +132,8 @@ class OptionsState extends MusicBeatState
 					FlxG.save.data.ghost = checkboxGroup.members[curSelected].change();
 				case 'reset button':
 					FlxG.save.data.downscroll = checkboxGroup.members[curSelected].change();
+				case 'less update':
+					FlxG.save.data.lessUpdate = checkboxGroup.members[curSelected].change();
 			}
 			FlxG.save.flush();
 		}

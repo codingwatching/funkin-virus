@@ -13,7 +13,9 @@ import flixel.tweens.FlxEase;
 import flixel.tweens.FlxTween;
 import flixel.util.FlxColor;
 import flixel.util.FlxTimer;
+#if newgrounds
 import io.newgrounds.NG;
+#end
 import lime.app.Application;
 
 #if windows
@@ -46,6 +48,10 @@ class MainMenuState extends MusicBeatState
 	var magenta:FlxSprite;
 	var camFollow:FlxObject;
 	public static var finishedFunnyMove:Bool = false;
+	public var triggered:Bool = false;
+	var randomChar:Character;
+	var randomString:Array<String> = ['virus','virus-mad','bf-pixel','gf-pixel','gf-box','bit'];
+	var randomAnim:Array<String> = ['singLEFT','singRIGHT','singUP','singDOWN'];
 
 	override function create()
 	{
@@ -64,6 +70,7 @@ class MainMenuState extends MusicBeatState
 		var bg:FlxSprite = new FlxSprite(-100).loadGraphic(Paths.image('menuBG'));
 		bg.scrollFactor.x = 0;
 		bg.scrollFactor.y = 0.10;
+		bg.color = 0xFF09E300;
 		bg.setGraphicSize(Std.int(bg.width * 1.1));
 		bg.updateHitbox();
 		bg.screenCenter();
@@ -87,7 +94,7 @@ class MainMenuState extends MusicBeatState
 			{
 				magenta.antialiasing = true;
 			}
-		magenta.color = 0xFFfd719b;
+		magenta.color = 0xFF00ACFF;
 		add(magenta);
 		// magenta.scrollFactor.set();
 
@@ -104,7 +111,8 @@ class MainMenuState extends MusicBeatState
 			menuItem.animation.addByPrefix('selected', optionShit[i] + " white", 24);
 			menuItem.animation.play('idle');
 			menuItem.ID = i;
-			menuItem.screenCenter(X);
+			//menuItem.screenCenter(X);
+			menuItem.x = 100;
 			menuItems.add(menuItem);
 			menuItem.scrollFactor.set();
 			if(FlxG.save.data.antialiasing)
@@ -119,6 +127,16 @@ class MainMenuState extends MusicBeatState
 					}});
 			else
 				menuItem.y = 60 + (i * 160);
+		}
+		randomChar = new Character(1200,100,FlxG.random.getObject(randomString));
+		add(randomChar);
+		switch (randomChar.curCharacter){
+			case 'virus' | 'virus-mad':
+				bg.color = 0xFF01CD00;
+			case 'bit' | 'bf-pixel':
+				bg.color = 0xFF00D3FF;
+			case 'gf-box' | 'gf-pixel':
+				bg.color = 0xFFFF0086;
 		}
 
 		firstStart = false;
@@ -237,12 +255,15 @@ class MainMenuState extends MusicBeatState
 			}
 		}
 
-		super.update(elapsed);
+		if (FlxG.save.data.lessUpdate)
+			super.update(elapsed/2);
+		else
+			super.update(elapsed);
 
-		menuItems.forEach(function(spr:FlxSprite)
+		/*menuItems.forEach(function(spr:FlxSprite)
 		{
 			spr.screenCenter(X);
-		});
+		});*/
 	}
 	
 	function goToState()
@@ -282,10 +303,23 @@ class MainMenuState extends MusicBeatState
 			if (spr.ID == curSelected && finishedFunnyMove)
 			{
 				spr.animation.play('selected');
-				camFollow.setPosition(spr.getGraphicMidpoint().x, spr.getGraphicMidpoint().y);
+				//camFollow.setPosition(spr.getGraphicMidpoint().x, spr.getGraphicMidpoint().y);
 			}
 
 			spr.updateHitbox();
 		});
+	}
+	override function beatHit(){
+		if (curBeat % 2 == 0){
+			switch (randomChar.curCharacter){
+				case 'gf-pixel' | 'gf-box':
+					randomChar.dance();
+				default:
+					if (!boyfriend.animation.curAnim.name.startsWith("sing"))
+						randomChar.playAnim('idle',2)
+			}
+		if (curBeat % 4 == 0 && (randomChar.curCharacter != 'gf-pixel' || randomChar.curCharacter != 'gf-box'))
+			randomChar.playAnim(FlxG.random.getObject(randomAnim));
+		}
 	}
 }

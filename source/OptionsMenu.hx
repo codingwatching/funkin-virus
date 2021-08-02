@@ -16,7 +16,7 @@ class OptionsMenu extends MusicBeatState
 
 	private var grpControls:FlxTypedGroup<Alphabet>;
 
-	var menuItems:Array<String> = ['options', 'misc', 'credits', 'special thanks', 'exit'];
+	var menuItems:Array<String> = ['options', 'misc', 'credits', 'achievements', 'exit'];
 
 	var notice:FlxText;
 
@@ -24,8 +24,7 @@ class OptionsMenu extends MusicBeatState
 	{
 		FlxG.sound.playMusic(Paths.music('options','shared'));
 		var menuBG:FlxSprite = new FlxSprite().loadGraphic('assets/images/menuDesat.png');
-		//controlsStrings = CoolUtil.coolTextFile('assets/data/controls.txt');
-		menuBG.color = 0xFFea71fd;
+		menuBG.color = 0xFF108C00;
 		menuBG.setGraphicSize(Std.int(menuBG.width * 1.1));
 		menuBG.updateHitbox();
 		menuBG.screenCenter();
@@ -40,8 +39,6 @@ class OptionsMenu extends MusicBeatState
 			var controlLabel:Alphabet = new Alphabet(0, (70 * i) + 30, menuItems[i], true, false);
 			controlLabel.screenCenter();
 			controlLabel.y = (100 * i) + 70;
-			//controlLabel.isMenuItem = true;
-			//controlLabel.targetY = i;
 			grpControls.add(controlLabel);
 			// DONT PUT X IN THE FIRST PARAMETER OF new ALPHABET() !!
 		}
@@ -55,7 +52,10 @@ class OptionsMenu extends MusicBeatState
 
 	override function update(elapsed:Float)
 	{
-		super.update(elapsed);
+		if (FlxG.save.data.lessUpdate)
+			super.update(elapsed/2);
+		else
+			super.update(elapsed);
 		if (controls.ACCEPT)
 		{
 			var daSelected:String = menuItems[curSelected];
@@ -69,14 +69,15 @@ class OptionsMenu extends MusicBeatState
 				case "exit":
 					FlxG.sound.playMusic('freakyMenu');
 					FlxG.switchState(new MainMenuState());
-				case "special thanks":
-					//FlxG.switchState(new options.CreditState());
 				case "misc":
 					FlxG.switchState(new OldOptionsMenu());
+				case "achievements":
+					FlxG.switchState(new MedalState());
 			}
 		}
 
 		if (controls.BACK #if (android || ios) || FlxG.android.justReleased.BACK #end) {
+			FlxG.sound.playMusic('freakyMenu');
 			FlxG.switchState(new MainMenuState());
 		}
 

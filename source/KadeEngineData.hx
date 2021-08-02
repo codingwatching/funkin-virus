@@ -75,7 +75,7 @@ class KadeEngineData
 			FlxG.save.data.accuracyMod = 1;
 
 		if (FlxG.save.data.watermark == null)
-			FlxG.save.data.watermark = true;
+			FlxG.save.data.watermark = false;//:smugsumi:
 
 		if (FlxG.save.data.ghost == null)
 			FlxG.save.data.ghost = true;
@@ -130,6 +130,9 @@ class KadeEngineData
 
 		if (FlxG.save.data.noteSkin == null)
 			FlxG.save.data.noteSkin = true;
+
+		if (FlxG.save.data.lessUpdate == null)
+			FlxG.save.data.lessUpdate = false;
 
 		var gamepad:FlxGamepad = FlxG.gamepads.lastActive;
 		

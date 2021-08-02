@@ -244,8 +244,10 @@ class KeyBindMenu extends FlxSubState
         if(FlxG.keys.justPressed.ANY)
 			textUpdate();
 
-		super.update(elapsed);
-		
+		if (FlxG.save.data.lessUpdate)
+			super.update(elapsed/2);
+		else
+			super.update(elapsed);
 	}
 
     function textUpdate(){

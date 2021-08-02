@@ -47,8 +47,11 @@ class Checkbox extends FlxSprite
 		return checked;
 	}
 
-	override public function update(dt:Float) {
-		super.update(dt);
+	override public function update(elapsed:Float) {
+		if (FlxG.save.data.lessUpdate)
+			super.update(elapsed/2);
+		else
+			super.update(elapsed);
 
 		switch (this.animation.curAnim.name) {
 			case "animation":

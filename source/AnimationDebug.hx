@@ -193,6 +193,9 @@ class AnimationDebug extends FlxState
 			char.playAnim(animList[curAnim]);
 		}
 
-		super.update(elapsed);
+		if (FlxG.save.data.lessUpdate)
+			super.update(elapsed/2);
+		else
+			super.update(elapsed);
 	}
 }

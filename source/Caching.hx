@@ -55,6 +55,7 @@ class Caching extends MusicBeatState
 		PlayerSettings.init();
 
 		KadeEngineData.initSave();
+		MedalSaves.initMedal();
 
 		FlxG.mouse.visible = false;
 
@@ -141,7 +142,10 @@ class Caching extends MusicBeatState
 
 	override function update(elapsed) 
 	{
-		super.update(elapsed);
+		if (FlxG.save.data.lessUpdate)
+			super.update(elapsed/2);
+		else
+			super.update(elapsed);
 	}
 
 

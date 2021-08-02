@@ -235,7 +235,10 @@ class Note extends FlxSprite
 
 	override function update(elapsed:Float)
 	{
-		super.update(elapsed);
+		if (FlxG.save.data.lessUpdate)
+			super.update(elapsed/2);
+		else
+			super.update(elapsed);
 		angle = modAngle + localAngle;
 
 		if (!modifiedByLua)

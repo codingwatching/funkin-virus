@@ -51,11 +51,15 @@ class HealthIcon extends FlxSprite
 		animation.play(char);
 
 		scrollFactor.set();
+		antialiasing = false;//cuz pixelll
 	}
 
 	override function update(elapsed:Float)
 	{
-		super.update(elapsed);
+		if (FlxG.save.data.lessUpdate)
+			super.update(elapsed/2);
+		else
+			super.update(elapsed);
 
 		if (sprTracker != null)
 			setPosition(sprTracker.x + sprTracker.width + 10, sprTracker.y - 30);

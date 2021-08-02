@@ -84,10 +84,8 @@ class OptionsState3 extends MusicBeatState
 		var noticebg = new FlxSprite(0, FlxG.height - 56).makeGraphic(FlxG.width, 60, FlxColor.BLACK);
 		noticebg.alpha = 0.25;
 
-
 		notice = new FlxText(0, 0, 0, "", 24);
 
-		//notice.x = (FlxG.width / 2) - (notice.width / 2);
 		notice.screenCenter();
 		notice.y = FlxG.height - 56;
 		notice.alpha = 0.6;
@@ -102,7 +100,10 @@ class OptionsState3 extends MusicBeatState
 	override function update(elapsed:Float)
 	{
 
-		super.update(elapsed);
+		if (FlxG.save.data.lessUpdate)
+			super.update(elapsed/2);
+		else
+			super.update(elapsed);
 
 		for (i in 0...checkboxGroup.length)
 		{

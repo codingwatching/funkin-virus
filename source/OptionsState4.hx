@@ -110,7 +110,10 @@ class OptionsState4 extends MusicBeatState
 	override function update(elapsed:Float)
 	{
 
-		super.update(elapsed);
+		if (FlxG.save.data.lessUpdate)
+			super.update(elapsed/2);
+		else
+			super.update(elapsed);
 
 		for (i in 0...checkboxGroup.length)
 		{
