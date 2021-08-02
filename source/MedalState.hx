@@ -91,7 +91,7 @@ class MedalState extends MusicBeatState
 		for (i in 0...medalGroup.length)
 		{
 			medalGroup.members[i].x = grptext.members[i].x + grptext.members[i].width + 10;
-			MedalSprite.members[i].y = grptext.members[i].y - 20;
+			medalGroup.members[i].y = grptext.members[i].y - 20;
 		}
 		var daSelected:String = menuItems[curSelected];
 

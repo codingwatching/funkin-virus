@@ -4,7 +4,7 @@ import flixel.FlxSprite;
 
 class MedalSprite extends FlxSprite
 {
-	public var unlock:Bool;
+	public var unlock:Bool = false;
 
 	public function new(?x, ?y, ?ass:String = "Sus") {
 		super(x, y);
@@ -55,11 +55,9 @@ class MedalSprite extends FlxSprite
 	}
 
 	public function checkShit(){
-		switch (unlock){
-			case false | null:
+			if (!unlock)
 				alpha = 0.6;
-			case true:
+			else
 				alpha = 1;
-		}
 	}
 }

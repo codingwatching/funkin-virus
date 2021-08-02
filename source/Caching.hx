@@ -27,6 +27,7 @@ import flixel.math.FlxRect;
 import flixel.util.FlxColor;
 import flixel.util.FlxTimer;
 import flixel.text.FlxText;
+import Achievements.MedalSaves;
 
 using StringTools;
 
@@ -140,7 +141,7 @@ class Caching extends MusicBeatState
 
 	var calledDone = false;
 
-	override function update(elapsed) 
+	override function update(elapsed:Float) 
 	{
 		if (FlxG.save.data.lessUpdate)
 			super.update(elapsed/2);

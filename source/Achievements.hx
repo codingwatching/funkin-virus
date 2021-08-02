@@ -20,6 +20,7 @@ class Achievements extends FlxSprite{
 
 	//functions here
 	public function new(?ASS:String){
+		super();
 		//animations
 		frames = Paths.getSparrowAtlas('8bit/them','shared');
 
@@ -44,7 +45,7 @@ class Achievements extends FlxSprite{
 		animation.addByPrefix('Big Sus','BIG SUS',24,false);
 		animation.addByPrefix('Perfect','The perfect player',24,false);
 		antialiasing = false;
-		setPosistion(800,FlxG.height * 0.9);
+		setPosition(800,FlxG.height * 0.9);
 		if (ASS == null){
 			trace('ass is null, aftermath of lmao too hard :(');
 			animation.play('Sus');

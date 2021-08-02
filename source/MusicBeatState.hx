@@ -11,6 +11,10 @@ import flixel.addons.ui.FlxUIState;
 import flixel.input.actions.FlxActionInput;
 import ui.FlxVirtualPad;
 import Achievements;
+import flixel.*;
+import flixel.tweens.FlxTween;
+import flixel.util.*;
+import flixel.text.FlxText;
 
 class MusicBeatState extends FlxUIState
 {
@@ -211,8 +215,8 @@ class MusicBeatState extends FlxUIState
 
 	public function medalPop(ass:String){
 		dontSpam = true;
-		public var medal:Achievements = new Achievements(ass);
-		public var medalBg:FlxSprite = new FlxSprite(800,FlxG.height * 0.9).loadGraphic(Paths.image('UNLOCK','shared'));
+		var medal:Achievements = new Achievements(ass);
+		var medalBg:FlxSprite = new FlxSprite(800, FlxG.height * 0.9).loadGraphic(Paths.image('UNLOCK', 'shared'));
 		medalBg.scale.set(5,5);
 		medalBg.antialiasing = false;
 		medalBg.y += 200;
@@ -235,16 +239,16 @@ class MusicBeatState extends FlxUIState
 		});
 	}
 	public function textPop(ass:String){
-		public var txt:FlxText = new FlxText(0, 0, 0, "", 24);
+		var txt:FlxText = new FlxText(0, 0, 0, "", 24);
 		txt.screenCenter();
 		txt.y = FlxG.height - 56;
 		txt.alpha = 0;
 		switch (ass){
 			case 'Sus':
-				text.text = "SUS!\nPress F 69 times.\n"
+				txt.text = "SUS!\nPress F 69 times.\n";
 				FlxG.save.data.Sus = true;
 			default:
-				text.text = "how\n";
+				txt.text = "how\n";
 		}
 		new FlxTimer().start(0.1, function(tmr:FlxTimer){
 			txt.alpha += 0.1;

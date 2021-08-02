@@ -1,6 +1,6 @@
 package ui;
 
-import flixel.FlxSprite;
+import flixel.*;
 
 class Checkbox extends FlxSprite
 {
@@ -47,8 +47,8 @@ class Checkbox extends FlxSprite
 		return checked;
 	}
 
-	override public function update(dt:Float) {
-		super.update(dt);
+	override public function update(elapsed:Float) {
+		super.update(elapsed);
 
 		switch (this.animation.curAnim.name) {
 			case "animation":

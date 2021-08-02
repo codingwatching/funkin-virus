@@ -315,8 +315,8 @@ class MainMenuState extends MusicBeatState
 				case 'gf-pixel' | 'gf-box':
 					randomChar.dance();
 				default:
-					if (!boyfriend.animation.curAnim.name.startsWith("sing"))
-						randomChar.playAnim('idle',2)
+					if (!randomChar.animation.curAnim.name.startsWith("sing"))
+						randomChar.playAnim('idle',2);
 			}
 		if (curBeat % 4 == 0 && (randomChar.curCharacter != 'gf-pixel' || randomChar.curCharacter != 'gf-box'))
 			randomChar.playAnim(FlxG.random.getObject(randomAnim));
