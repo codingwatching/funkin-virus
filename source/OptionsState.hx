@@ -114,7 +114,7 @@ class OptionsState extends MusicBeatState
 			case 'reset button':
 				notice.text = 'Toggle pressing R to gameover.\nSwitch pages using RIGHT\n';
 			case 'less update':
-				notice.text = 'Makes update frames way slower but increases performance (Might cause bugs)\nSwitch pages using RIGHT\n'
+				notice.text = 'Makes update frames way slower but increases performance (Might cause bugs)\nSwitch pages using RIGHT\n';
 		}
 
 		if (controls.ACCEPT)

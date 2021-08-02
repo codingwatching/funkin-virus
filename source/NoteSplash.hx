@@ -36,7 +36,7 @@ class NoteSplash extends FlxSprite
 		antialiasing = FlxG.save.data.antialiasing;
 	}
 
-	override public function update(elapsed)
+	override public function update(elapsed:Float)
 	{
 		if (animation.curAnim.finished)
 			kill();

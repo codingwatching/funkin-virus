@@ -885,7 +885,7 @@ class PlayState extends MusicBeatState
 				dad.y += 420;
 				camPos.set(dad.getGraphicMidpoint().x + 300, dad.getGraphicMidpoint().y);
 			case 'bit':
-				dad.x += 100
+				dad.x += 100;
 				dad.y += 300;
 				camPos.set(dad.getGraphicMidpoint().x + 300, dad.getGraphicMidpoint().y);
 				if (SONG.song.toLowerCase() == 'disco'){
@@ -4442,7 +4442,7 @@ class PlayState extends MusicBeatState
 	override function beatHit()
 	{
 		super.beatHit();
-		if (curStage == 'darkroom' && SONG. song.toLowerCase() == 'intoxicate'){
+		if (curStage == 'darkroom' && SONG.song.toLowerCase() == 'intoxicate'){
 			if (curStep > 898 && curStep < 1408){
 				bg.alpha = 1;
 				camHUD.zoom += 0.006;

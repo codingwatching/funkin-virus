@@ -1,6 +1,6 @@
 package;
 
-import flixel.FlxSprite;
+import flixel.*;
 
 class Checkbox extends FlxSprite
 {
