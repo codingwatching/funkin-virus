@@ -128,7 +128,7 @@ class MainMenuState extends MusicBeatState
 			else
 				menuItem.y = 60 + (i * 160);
 		}
-		randomChar = new Character(800,100,FlxG.random.getObject(randomString));
+		randomChar = new Character(900,100,FlxG.random.getObject(randomString));
 		add(randomChar);
 		switch (randomChar.curCharacter){
 			case 'virus' | 'virus-mad':
