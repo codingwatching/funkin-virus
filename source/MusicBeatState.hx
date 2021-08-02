@@ -161,10 +161,12 @@ class MusicBeatState extends FlxUIState
 		switch (fpressed){
 			case 69:
 				fpressed == 70;
-				medalPop('Sus');
+				if (!dontSpam)
+					medalPop('Sus');
 			case 420:
 				fpressed == 421;
-				medalPop('Big Sus');
+				if (!dontSpam)
+					medalPop('Big Sus');
 		}
 
 	}
@@ -216,7 +218,7 @@ class MusicBeatState extends FlxUIState
 	public function medalPop(ass:String){
 		dontSpam = true;
 		var medal:Achievements = new Achievements(ass);
-		var medalBg:FlxSprite = new FlxSprite(800, FlxG.height * 0.9).loadGraphic(Paths.image('UNLOCK', 'shared'));
+		var medalBg:FlxSprite = new FlxSprite(800, FlxG.height * 0.9).loadGraphic(Paths.image('8bit/UNLOCK', 'shared'));
 		medalBg.scale.set(5,5);
 		medalBg.antialiasing = false;
 		medalBg.y += 200;
